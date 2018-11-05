@@ -9,3 +9,9 @@ def create_register(first_name,last_name,username,number,email,password,account_
     '''
     new_register = Register (first_name,last_name,username,number,email,password,account_type)
     return new_register
+
+def save_register(register):
+    '''
+    Function to save register
+    '''
+    register.save_register()
