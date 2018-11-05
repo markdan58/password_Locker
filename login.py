@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3.6
 
 from  register import Register
@@ -28,7 +27,7 @@ def find_register(number):
     '''
     return Register.find_by_number(number)
 
-    def check_existing_register(number):
+def check_existing_register(number):
     '''
     Function that check if account exists with that number and return a Boolean
     '''
@@ -121,3 +120,4 @@ def main():
 
 if __name__ == '__main__':
       main()
+
