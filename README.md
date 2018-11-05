@@ -34,12 +34,12 @@ $ python3.6 -m pip install pyperclip
 The tests are run in the test_register file. Its where all the tests are of the funcionality are tested.
 
 ## Deployment
-
+```
 *git add 
 *git commit
 *git remote add github link
 *git remote push to origin (branch)
-
+```
 
 ## Built With
 
