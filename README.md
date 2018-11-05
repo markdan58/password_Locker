@@ -26,7 +26,7 @@ Pyperclip Installation:
 $ python3.6 -m pip install pyperclip
 
 ```
-##Live Link
+### Live Link
 <a href="https://github.com/markdan58/password_Locker">Password Locker<a>
 
 ## Running the tests
