@@ -123,3 +123,7 @@ class TestRegister(unittest.TestCase):
         Register.copy_email("0712345678")
 
         self.assertEqual(self.new_Register.email,pyperclip.paste())
+
+
+if __name__ ==  '__main__':
+    unittest.main()
