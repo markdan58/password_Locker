@@ -15,3 +15,9 @@ def save_register(register):
     Function to save register
     '''
     register.save_register()
+
+def del_register(register):
+    '''
+    Function to delete a register
+    '''
+    register.delete_register()
