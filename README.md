@@ -3,7 +3,7 @@ Password Locker
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The Password Locker is an application that allows users to create accounts using their first and last name,username,email,password and account type and  it saves their credentials of which they can access them later whenever they forget their account details.
 
 ### Prerequisites
 
@@ -33,20 +33,12 @@ $ python3.6 -m pip install pyperclip
 
 The tests are run in the test_register file. Its where all the tests are of the funcionality are tested.
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
-git add 
-git commit
-git remote add github link
-git remote push to origin
+*git add 
+*git commit
+*git remote add github link
+*git remote push to origin (branch)
 
 
 ## Built With
