@@ -89,7 +89,7 @@ class TestRegister(unittest.TestCase):
 
         self.assertEqual(found_register.account_type,test_register.account_type)
 
-        
+
      # 5th test is testing if the account actually exist
     def test_register_exists(self):
         '''
@@ -103,3 +103,11 @@ class TestRegister(unittest.TestCase):
         register_exists = Register.register_exist("Twitter")
 
         self.assertTrue(register_exists)
+
+    # 6th test is displaying all my registered accounts
+    def test_display_all_registers(self):
+        '''
+        method that returns a list of all accounts saved
+        '''
+
+        self.assertEqual(Register.display_register(),Register.register_list)
