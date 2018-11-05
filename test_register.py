@@ -111,3 +111,15 @@ class TestRegister(unittest.TestCase):
         '''
 
         self.assertEqual(Register.display_register(),Register.register_list)
+
+
+    # 7th test is copying username details
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found contact
+        '''
+
+        self.new_Register.save_register()
+        Register.copy_email("0712345678")
+
+        self.assertEqual(self.new_Register.email,pyperclip.paste())
