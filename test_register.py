@@ -32,3 +32,13 @@ class TestRegister(unittest.TestCase):
         self.assertEqual(self.new_Register.email,"james@ms.com")
         self.assertEqual(self.new_Register.password,"jMur463463")
         self.assertEqual(self.new_Register.account_type,"Instagram")
+
+        
+    # 2nd test is testing if our created register is saved
+    def test_save_register(self):
+        '''
+        test_save_register test case to test if the register object is saved into
+         the register list
+        '''
+        self.new_Register.save_register() # saving the new register
+        self.assertEqual(len(Register.register_list),1)
