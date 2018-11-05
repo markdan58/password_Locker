@@ -33,7 +33,7 @@ class TestRegister(unittest.TestCase):
         self.assertEqual(self.new_Register.password,"jMur463463")
         self.assertEqual(self.new_Register.account_type,"Instagram")
 
-        
+
     # 2nd test is testing if our created register is saved
     def test_save_register(self):
         '''
@@ -42,3 +42,34 @@ class TestRegister(unittest.TestCase):
         '''
         self.new_Register.save_register() # saving the new register
         self.assertEqual(len(Register.register_list),1)
+
+
+    # 3rd testing if its saving multiple accounts
+    def test_save_multiple_register(self):
+            '''
+            test_save_multiple_contact to check if we can save multiple contact
+            objects to our contact_list
+            '''
+            self.new_register.save_register()
+            test_register = Register("Danmark","Masai","DMM","0790471962","danm@ms.com","ddmm454525","Twitter")# new register
+            test_register.save_register()
+            self.assertEqual(len(Register.register_list),2)
+
+
+    # setup and class creation up here
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Register.register_list = []
+
+    # other test cases here
+    def test_save_multiple_register(self):
+            '''
+            test_save_multiple_register to check if we can save multiple register
+            objects to our register_list
+            '''
+            self.new_Register.save_register()
+            test_register =  Register("Danmark","Masai","DMM","0790471962","danm@ms.com","ddmm454525","Twitter") # new register
+            test_register.save_register()
+            self.assertEqual(len(Register.register_list),2)
