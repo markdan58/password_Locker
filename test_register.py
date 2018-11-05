@@ -73,3 +73,18 @@ class TestRegister(unittest.TestCase):
             test_register =  Register("Danmark","Masai","DMM","0790471962","danm@ms.com","ddmm454525","Twitter") # new register
             test_register.save_register()
             self.assertEqual(len(Register.register_list),2)
+
+
+    # 4th test is finding account by accountype 
+    def test_find_register_by_account_type(self):
+        '''
+        test to check if we can find a account by account type and display information
+        '''
+
+        self.new_Register.save_register()
+        test_register = Register("Danmark","Masai","DMM","0790471962","danm@ms.com","ddmm454525","Twitter")# new register
+        test_register.save_register()
+
+        found_register = Register.find_by_account_type("Twitter")
+
+        self.assertEqual(found_register.account_type,test_register.account_type)
