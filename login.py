@@ -27,3 +27,15 @@ def find_register(number):
     Function that finds a contact by number and returns the register
     '''
     return Register.find_by_number(number)
+
+    def check_existing_register(number):
+    '''
+    Function that check if account exists with that number and return a Boolean
+    '''
+    return Register.register_exist(number)
+
+def display_register():
+        '''
+        Function that returns all the saved accounts
+        '''
+        return Register.display_register()
