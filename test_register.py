@@ -88,3 +88,18 @@ class TestRegister(unittest.TestCase):
         found_register = Register.find_by_account_type("Twitter")
 
         self.assertEqual(found_register.account_type,test_register.account_type)
+
+        
+     # 5th test is testing if the account actually exist
+    def test_register_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the account.
+        '''
+
+        self.new_Register.save_register()
+        test_register = Register("Danmark","Masai","DMM","0790471962","danm@ms.com","ddmm454525","Twitter")# new register
+        test_register.save_register()
+
+        register_exists = Register.register_exist("Twitter")
+
+        self.assertTrue(register_exists)
