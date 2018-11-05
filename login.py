@@ -21,3 +21,9 @@ def del_register(register):
     Function to delete a register
     '''
     register.delete_register()
+
+def find_register(number):
+    '''
+    Function that finds a contact by number and returns the register
+    '''
+    return Register.find_by_number(number)
